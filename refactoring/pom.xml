@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.daviddefrancisco</groupId>
+	<artifactId>refactoring</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1</version>
+	<name>refactoring Tests</name>
+	<description>Code from Martin Fowler's book to practice refactoring and measure quality gains.</description>
+
+	<profiles>
+		<!-- Sonar profile -->
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Place your sonar server URL here -->
+				<sonar.host.url>http://amaltea-fe.tid.indra.es:9000</sonar.host.url>
+			</properties>
+		</profile>		
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<finalName>refactoring-tests</finalName>
+	</build>
+
+	<reporting>
+		<plugins>
+			<!-- SOnar reporting plugin -->
+			<plugin>
+				<groupId>org.codehaus.sonar-plugins</groupId>
+				<artifactId>maven-report</artifactId>
+				<version>0.1</version>
+				<configuration>
+					<sonar.host.url>http://amaltea-fe.tid.indra.es:9000</sonar.host.url>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<scm>
+		<url>https://github.com/daviddefco/RefactoringTests.git</url>
+	</scm>
+</project>
