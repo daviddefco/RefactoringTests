@@ -4,7 +4,7 @@
 	<groupId>com.daviddefrancisco</groupId>
 	<artifactId>refactoring</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1</version>
+	<version>0.2</version>
 	<name>refactoring Tests</name>
 	<description>Code from Martin Fowler's book to practice refactoring and measure quality gains.</description>
 	
