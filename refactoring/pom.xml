@@ -7,7 +7,7 @@
 	<version>0.1</version>
 	<name>refactoring Tests</name>
 	<description>Code from Martin Fowler's book to practice refactoring and measure quality gains.</description>
-
+	
 	<profiles>
 		<!-- Sonar profile -->
 		<profile>
@@ -30,11 +30,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-
-	<build>
-		<finalName>refactoring-tests</finalName>
-	</build>
 
 	<reporting>
 		<plugins>
