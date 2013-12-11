@@ -64,9 +64,12 @@ public class MovieTest {
 	public void longChildrenRentalTest() {
 		aCustomer.addRental(braveRental);
 		assertStatement(4.5, 1);
-	}	
+	}
+	
 	private void assertStatement(double amount, int points) {
 		assert aCustomer.statement().contains("Amount owed is " + String.valueOf(amount));
 		assert aCustomer.statement().contains("You earned " + String.valueOf(points));
+		assert aCustomer.htmlStatement().contains("owe <EM>" + String.valueOf(amount));
+		assert aCustomer.htmlStatement().contains("you earned <EM>" + String.valueOf(points));		
 	}
 }
